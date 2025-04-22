@@ -86,10 +86,16 @@ async function buildWorker() {
         transformObjectKeys: true,
         renameGlobals: true,
         deadCodeInjection: true,
-        deadCodeInjectionThreshold: 0.2,
+        deadCodeInjectionThreshold: 1,
         simplify: true,
         compact: true,
-        target: "node"
+        target: "node",
+		
+		controlFlowFlattening: true,
+	    controlFlowFlatteningThreshold: 1,
+	    unicodeEscapeSequence: true
+        
+        
     });
 
     const worker = obfuscationResult.getObfuscatedCode();
