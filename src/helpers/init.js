@@ -11,7 +11,7 @@ export function initializeParams(request, env) {
     globalThis.userID = '914b4e56-ee51-448a-aac4-6fd71576e7e2';
     globalThis.TRPassword = 'ikojkdjg9()_*(_';
     globalThis.proxyIP = '138.201.244.245';
-    globalThis.proxyIP = proxyIPs?.length ? proxyIPs[Math.floor(Math.random() * proxyIPs?.length)] : 'bpb.yousef.isegaro.com';
+    //globalThis.proxyIP = proxyIPs?.length ? proxyIPs[Math.floor(Math.random() * proxyIPs?.length)] : 'bpb.yousef.isegaro.com';
     globalThis.hostName = request.headers.get('Host');
     globalThis.pathName = url.pathname;
     globalThis.client = searchParams.get('app');
