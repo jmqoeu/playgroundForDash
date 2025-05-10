@@ -88,7 +88,11 @@ async function buildWorker() {
         renameGlobals: true,
         deadCodeInjection: true,
         deadCodeInjectionThreshold: 1,
-        target: "browser"
+        target: "browser",
+
+        compact: true,
+        controlFlowFlattening: true,
+        controlFlowFlatteningThreshold: 1
     });
 
     const finalCode = obfuscationResult.getObfuscatedCode();
