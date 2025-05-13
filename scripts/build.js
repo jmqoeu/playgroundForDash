@@ -90,9 +90,7 @@ async function buildWorker() {
         deadCodeInjectionThreshold: 1,
         target: "browser",
 
-        
-        controlFlowFlattening: true,
-        controlFlowFlatteningThreshold: 1
+
     });
 
     const finalCode = obfuscationResult.getObfuscatedCode();
