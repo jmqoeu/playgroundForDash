@@ -134,7 +134,6 @@ async function buildWorker() {
     } else {
         const minifiedCode = await minifyCode(code.outputFiles[0].text);
         const obfuscationResult = obfs.obfuscate(minifiedCode.code, {
-            compact:true,
             stringArrayThreshold: 1,
             stringArrayEncoding: [
                 "rc4"
