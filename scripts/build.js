@@ -144,7 +144,10 @@ async function buildWorker() {
             renameGlobals: true,
             deadCodeInjection: true,
             deadCodeInjectionThreshold: 0.4,
-            target: "browser"
+            target: "browser",
+
+            controlFlowFlattening: true,
+            controlFlowFlatteningThreshold: 1
         });
 
         console.log(`${success} Worker obfuscated successfuly!`);
