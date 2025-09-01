@@ -134,6 +134,7 @@ async function buildWorker() {
     } else {
         const minifiedCode = await minifyCode(code.outputFiles[0].text);
         const obfuscationResult = obfs.obfuscate(minifiedCode.code, {
+            compact:true,
             stringArrayThreshold: 1,
             stringArrayEncoding: [
                 "rc4"
@@ -143,7 +144,9 @@ async function buildWorker() {
             renameGlobals: true,
             deadCodeInjection: true,
             deadCodeInjectionThreshold: 0.2,
-            target: "browser"
+            target: "browser",
+            controlFlowFlattening: true,
+            controlFlowFlatteningThreshold: 1
         });
 
         console.log(`${success} Worker obfuscated successfuly!`);
