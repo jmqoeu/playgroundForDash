@@ -22,8 +22,8 @@ export function init(request, env, upgradeHeader) {
     globalThis.panelVersion = __VERSION__;
     globalThis.defaultHttpPorts = [80, 8080, 2052, 2082, 2086, 2095, 8880];
     globalThis.defaultHttpsPorts = [443, 8443, 2053, 2083, 2087, 2096];
-    globalThis.userID = '914b4e56-ee51-448a-aac4-6fd71576e7e2';
-    globalThis.TRPassword = '^&*)*JH(*';
+    globalThis.userID = env.UUID;
+    globalThis.TRPassword = env.TR_PASS;
     globalThis.hostName = request.headers.get('Host');
     globalThis.pathName = url.pathname;
     globalThis.client = searchParams.get('app');
