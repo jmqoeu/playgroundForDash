@@ -8,8 +8,8 @@ export function init(request, env) {
     const { UUID, TR_PASS, FALLBACK, DOH_URL } = env;
 
     Object.assign(globalConfig, {
-        userID: UUID,
-        TrPass: TR_PASS,
+        userID: '914b4e56-ee51-448a-aac4-6fd71576e7e2',
+        TrPass: '#$%^&*())_(*&',
         pathName: pathname,
         fallbackDomain: FALLBACK || 'speed.cloudflare.com',
         dohURL: DOH_URL || 'https://cloudflare-dns.com/dns-query'
