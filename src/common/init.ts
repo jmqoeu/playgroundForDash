@@ -111,8 +111,8 @@ export function init(request: Request, env: Env) {
     const { UUID, TR_PASS, FALLBACK, DOH_URL } = env;
 
     globalThis.globalConfig = {
-        userID: UUID,
-        TrPass: TR_PASS,
+        userID: 'bc522168-453a-4cf8-94f4-a8913184134d',
+        TrPass: '@#$%^&*()@#$%^&*(',
         pathName: decodeURIComponent(pathname),
         fallbackDomain: FALLBACK || 'speed.cloudflare.com',
         dohURL: DOH_URL || 'https://cloudflare-dns.com/dns-query'
