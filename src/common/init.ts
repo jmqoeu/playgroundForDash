@@ -109,12 +109,11 @@ export async function setSettings(request: Request, env: Env) {
 export function init(request: Request, env: Env) {
     const { pathname } = new URL(request.url);
     const { UUID, TR_PASS, FALLBACK, DOH_URL } = env;
+    //const { FALLBACK, DOH_URL } = env;
 
     globalThis.globalConfig = {
-        UUID: 'da25191f-2416-45ef-a749-1723911539b4',
-        TR_PASS: '@#$%^&*()(*&^#$%^&*(',
-        userID: UUID,
-        TrPass: TR_PASS,
+        userID: UUID || '21863d96-ba57-499e-ae07-a97b8c8aa04e',
+        TrPass: TR_PASS || '@#$%^&*(^%R#*^%#$%^&*',
         pathName: decodeURIComponent(pathname),
         fallbackDomain: FALLBACK || 'speed.cloudflare.com',
         dohURL: DOH_URL || 'https://cloudflare-dns.com/dns-query'
