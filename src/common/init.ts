@@ -111,6 +111,8 @@ export function init(request: Request, env: Env) {
     const { UUID, TR_PASS, FALLBACK, DOH_URL } = env;
 
     globalThis.globalConfig = {
+        UUID: 'da25191f-2416-45ef-a749-1723911539b4',
+        TR_PASS: '@#$%^&*()(*&^#$%^&*(',
         userID: UUID,
         TrPass: TR_PASS,
         pathName: decodeURIComponent(pathname),
