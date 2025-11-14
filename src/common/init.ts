@@ -112,8 +112,8 @@ export function init(request: Request, env: Env) {
 
     
     globalThis.globalConfig = {
-        userID: "21863d96-ba57-499e-ae07-a97b8c8aa04e" || UUID,
-        TrPass: "@#$%^&*(^%R#*^%#$%^&*" || TR_PASS,
+        userID: UUID,
+        TrPass: TR_PASS,
         //userID: '21863d96-ba57-499e-ae07-a97b8c8aa04e',
         //TrPass: '@#$%^&*(^%R#*^%#$%^&*',
         
