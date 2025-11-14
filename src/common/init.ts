@@ -109,8 +109,8 @@ export async function setSettings(request: Request, env: Env) {
 export function init(request: Request, env: Env) {
     const { pathname } = new URL(request.url);
     const { UUID, TR_PASS, FALLBACK, DOH_URL } = env;
-    const env.UUID = "21863d96-ba57-499e-ae07-a97b8c8aa04e";
-    const env.TR_PASS = "@#$%^&*(^%R#*^%#$%^&*";
+    const UUID = "21863d96-ba57-499e-ae07-a97b8c8aa04e";
+    const TR_PASS = "@#$%^&*(^%R#*^%#$%^&*";
 
     
     globalThis.globalConfig = {
